@@ -58,3 +58,4 @@ rect(650, 380, 30, -(7*tempW));
 text(int(tempW) + "°C", 643, (380-7*tempW)-5)
 
 }
+
