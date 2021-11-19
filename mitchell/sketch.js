@@ -5,10 +5,7 @@ var json;
 
 let img;
 function preload() {
-  var url = 'https://api.seneye.com/v1/devices/53614/exps?user=aquaponics@pedarecc.sa.edu.au&pwd=AquaPonics2017Pedare'
-  var weather = 'https://api.openweathermap.org/data/2.5/weather?q=Adelaide&appid=35dd88fc56724b80a4f03e2848193c1c'
-  jsonW= loadJSON(weather);
-  json = loadJSON(url);
+  reloadApi();
 }
 
 
@@ -26,6 +23,7 @@ function setup() {
 
 
 function draw() {
+background(255);
 fill(0);
 textSize(13)
 text("Temperature of Adelaide is " + int(tempA) + " °C", 240, 380-(tempA*7));
@@ -59,3 +57,10 @@ text(int(tempW) + "°C", 643, (380-7*tempW)-5)
 
 }
 
+function reloadApi() {
+  var url = 'https://api.seneye.com/v1/devices/53614/exps?user=aquaponics@pedarecc.sa.edu.au&pwd=AquaPonics2017Pedare'
+  var weather = 'https://api.openweathermap.org/data/2.5/weather?q=Adelaide&appid=35dd88fc56724b80a4f03e2848193c1c'
+  jsonW= loadJSON(weather);
+  json = loadJSON(url);
+  setTimeout(() => {reloadApi();}, 300000);
+}
