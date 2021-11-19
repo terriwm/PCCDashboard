@@ -66,3 +66,7 @@ function sleep(milliseconds) {
     currentDate = Date.now();
   } while (currentDate - date < milliseconds);
 }
+
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
