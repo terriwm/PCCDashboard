@@ -12,10 +12,7 @@ var weatherData;
 var TempAdaptivecolour;
 
 function preload(){
-  var url = "https://api.seneye.com/v1/devices/53614/exps?user=aquaponics@pedarecc.sa.edu.au&pwd=AquaPonics2017Pedare";
-  json = loadJSON(url);
-  var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=Adelaide&appid=5b7874629394de87b6ebab7fdc47cdd2";
-  weatherData = loadJSON(apiUrl);
+  getApi();
 }
 
 function setup() {
@@ -57,6 +54,15 @@ function draw() {
   textSize(size);
   text(data/dividedBy + measurement,circleX - factor2,circleY + size/2);
   text(underCircleText, circleX - factor, circleY + data/2 + 20);
+}
+
+function getApi() {
+  var url = "https://api.seneye.com/v1/devices/53614/exps?user=aquaponics@pedarecc.sa.edu.au&pwd=AquaPonics2017Pedare";
+  json = loadJSON(url);
+  var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=Adelaide&appid=5b7874629394de87b6ebab7fdc47cdd2";
+  weatherData = loadJSON(apiUrl);
+  setTimeout(() => {getApi()}, 300000);
+  console.log("updated");
 }
 
 function sleep(milliseconds) {
