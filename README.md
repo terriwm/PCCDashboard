@@ -10,5 +10,5 @@ First run: <br/>
 Then pull the latest code: <br/>
 `git pull` <br/>
 Run the python script: <br\>
-`python3 dynamicDashboard.py` <br/>
+`python3 dynamicDashboard.py` <br\>
 Then input the desired delay between the dashboards, minimum 5 second
