@@ -9,6 +9,6 @@ First run: <br/>
 `cd PCCDashboard` <br/>
 Then pull the latest code: <br/>
 `git pull` <br/>
-Run the python script: <br\>
-`python3 dynamicDashboard.py` <br\>
+Run the python script: <br/>
+`python3 dynamicDashboard.py` <br/>
 Then input the desired delay between the dashboards, minimum 5 second
