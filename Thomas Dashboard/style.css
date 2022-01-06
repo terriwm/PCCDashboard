@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --self-care: hsl(43, 84%, 65%);
+    --bullshit: hsl(336, 61%, 81%);
+
+    --bg: hsl(226, 43%, 10%);
+    --card-bg: hsl(235, 46%, 20%);
+    --text: hsl(235, 45%, 61%);
+    --active: hsl(236, 100%, 87%);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+  }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    font-weight: 500;
+
+}
+.top p {
+    color: rgb(255, 255, 255);
+}
+img:hover {
+    color: var(--active);
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: 300;
+    font-size: 60px;
+    margin-top: 30px;
+
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: 300;
+    font-size: 50px; 
+    padding-left: 30px;
+}
+h5 {
+    color: var(--active);
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+    padding: 30px;
+    padding-bottom: 0;
+    padding-top:15px;
+}
+h6 {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+body{
+    background-color: var(--bg);
+    color: var(--bg);
+    width: 100vw;
+}
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+section {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1275px;
+    height: 100vh;
+    max-height: 500px;
+}
+@media only screen and (max-width: 600px) {
+ section {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1275px;
+    max-height: 10000000000px;
+ }
+ .profile {
+     height: 250px;
+     padding-bottom: 0px;
+ }
+}
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* auto-fit allows for fully responsive grid without media queries. 300px makes sure that it does not go past the set length of cards. */
+    grid-gap: 25px;
+}
+.container:nth-child(1) {
+    background: var(--card-bg);
+    grid-row: 1/2;
+    grid-column: 1/2;
+    border-radius: 15px;
+    z-index: 0;
+    height: 210px;
+}
+.profile {
+    background: var(--blue);
+    border-radius: 15px;
+    height:170px;
+    z-index:10;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+.container:nth-child(2) {
+    background: var(--work);
+    border-radius: 20px;
+    height: 30%;
+
+}
+.basic{
+    background: var(--card-bg);
+    border-radius: 15px;
+    margin-top:40px;
+    padding: 30px;
+    padding-bottom: 17px;
+}
+.basic:hover{
+    background: var(--active);
+
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container:nth-child(3) {
+    background: var(--play);
+    border-radius: 20px;
+    height: 30%;
+}
+.container:nth-child(4) {
+    background: var(--study);
+    border-radius: 20px;
+    height: 30%;
+}
+.container:nth-child(5) {
+    background: var(--exercise);
+    border-radius: 20px;
+    height: 30%;
+}
+.container:nth-child(6) {
+    background: var(--social);
+    border-radius: 20px;
+    height: 30%;
+}
+.container:nth-child(7) {
+    background: var(--self-care);
+    border-radius: 20px;
+    height: 30%;
+}
+.container:nth-child(8) {
+    background: var(--bullshit);
+    border-radius: 20px;
+    height: 30%;
+}
+.active {
+    color: var(--active);
+}
