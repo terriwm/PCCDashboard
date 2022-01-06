@@ -42,6 +42,9 @@ async function preload(){
   for (var i = 0; i < 7; i++){
     document.getElementById(i).innerHTML = WaterData[i];
   }
+  for (var i = 0; i < 7; i++) {
+    WaterData.shift(); 
+  }
 }
 
 preload();
