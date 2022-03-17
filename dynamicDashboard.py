@@ -15,7 +15,7 @@ dir.remove("dynamicDashboard.py")
 #cycle through all the dashboards, launching and killing the browser
 while True:
     for directory in dir:
-        os.system("chromium-browser " + directory + "/index.html &")
+        os.system("chromium-browser \"" + directory + "\"/index.html &")
         sleep(5)
         #wait for the browser to open then press f11 to go full screen
         os.system("xdotool key F11")
